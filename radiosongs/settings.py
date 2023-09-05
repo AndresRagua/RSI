@@ -54,7 +54,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    #'whitenoise.middleware.WhiteNoiseMiddleware', # new line added
+    #'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -62,7 +62,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 
 ROOT_URLCONF = 'radiosongs.urls'
 
@@ -93,8 +92,12 @@ DATABASE_URL = os.getenv('DATABASE_URL', None)
 if not DATABASE_URL:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'radioSongs',
+            'USER': 'postgres',
+            'PASSWORD': '19092001',
+            'HOST': '127.0.0.1',
+            'DATABASE_PORT': '5432',
         }
     }
 else:
