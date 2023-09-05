@@ -151,7 +151,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR/"static",
-    "app/static."]
+    "app/static/"]
 STATIC_ROOT = BASE_DIR/'assets'
 #Prueba Final
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
