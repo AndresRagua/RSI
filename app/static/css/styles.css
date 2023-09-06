@@ -649,6 +649,10 @@ progress {
   color: #6c757d;
 }
 
+.container_full{
+  width: 100%;
+}
+
 .container,
 .container-fluid,
 .container-xxl,
