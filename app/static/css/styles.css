@@ -64,9 +64,10 @@
   --bs-body-bg: #fff;
 }
 .rs {
+  display: block;
+  size: cover;
+  width: 40%;
   margin: auto;
-  width: 30%;
-  height: 30%;
 }
 .rs1 {
   text-align: right;
