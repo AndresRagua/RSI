@@ -28,6 +28,6 @@ urlpatterns=[
     path('eliminarPublicidad/<int:id>/', views.eliminar_publicidad, name='eliminarPublicidad'),
     path('adminContacto/', views.admin_contacto, name='adminContacto'),
     path('eliminarContacto/<int:id>/', views.eliminar_contacto, name='eliminarContacto'),
-]
+]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) # to import static in deployment
 
 urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
