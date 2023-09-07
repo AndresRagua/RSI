@@ -63,9 +63,10 @@
   --bs-body-color: #212529;
   --bs-body-bg: #fff;
 }
-.rs {
-  display: flex;
-  justify-content: center;
+.rs_logo {
+  width: 45%;
+}
+.rs_radio{
   width: 40%;
 }
 .rs1 {
