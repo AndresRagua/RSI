@@ -74,6 +74,8 @@
   font-family: 'Anton', sans-serif;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 27px;
+  text-align: justify;
+  color: white;
 }
 .centrado {
   text-align: center;
