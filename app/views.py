@@ -34,6 +34,11 @@ def registrar_contacto(request):
 
     return redirect('/contacto')
 
+def television(request):
+    return render(request, 'rstv.html')
+
+#####################################################################################################################
+
 def login_admin(request):
     if request.method == 'GET':
         return render(request,"registration/login.html",{'form':AuthenticationForm})
