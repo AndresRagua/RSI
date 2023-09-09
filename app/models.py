@@ -19,7 +19,7 @@ class Programacion(models.Model):
     programa = models.ForeignKey(Programa, null=True, blank=True, on_delete=models.CASCADE)
 
     class Meta:
-        ordering = ['fecha', 'nombre']
+        ordering = ['-fecha', 'nombre']
 
 class Contacto(models.Model):
     nombre = models.CharField(max_length=50)
