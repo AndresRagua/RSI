@@ -73,13 +73,9 @@
                                 <a href="{{p.link}}" target="_blank" ><img class="mx-auto bg-light" src="{{p.imagen.url}}" alt=""></a>
                                 <h4>{{p.nombre}}</h4>
                                 <p class="">{{p.informacion}}</p>
-                                {% if p.instagram != '' %}
                                 <a class="btn btn-dark btn-social mx-2" href="{{p.instagram}}" target="_blank" aria-label="Parveen Anand Instagram Profile"><i class="fab fa-instagram"></i></i></a>
-                                {% elif p.twitter != '' %}
                                 <a class="btn btn-dark btn-social mx-2" href="{{p.twitter}}" target="_blank" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
-                                {% else p.facebook != '' %}
                                 <a class="btn btn-dark btn-social mx-2" href="{{p.facebook}}" target="_blank" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
-                                {% endif %}
                             </div>
                         </div>
                         {% endfor %}
