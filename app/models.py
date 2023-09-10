@@ -30,10 +30,10 @@ class Contacto(models.Model):
 class Publicidad(models.Model):
     nombre = models.CharField(max_length=50)
     informacion = models.CharField(max_length=1000)
-    twitter = models.CharField(max_length=200)
-    facebook = models.CharField(max_length=200)
+    twitter = models.CharField(max_length=200, null=True, blank=True)
+    facebook = models.CharField(max_length=200, null=True, blank=True)
     instagram = models.CharField(max_length=200, null=True, blank=True)
-    link = models.CharField(max_length=200, null=True)
+    link = models.CharField(max_length=200, null=True, blank=True)
     imagen = models.ImageField(upload_to='images/', null=True, blank=True)
 
 class Artista(models.Model):

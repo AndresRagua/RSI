@@ -39,7 +39,7 @@
                             <li class="nav-item"><a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a></li>
                             <li class="nav-item"><a class="nav-link" href="{% url 'artistas' %}">Artistas</a></li>
                             <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contáctanos</a></li>
-                            <li class="nav-item"><a class="nav-link btn btn-secondary" href="{% url 'television' %}" target="_blank">La televisión</a></li>
+                            <li class="nav-item"><a class="nav-link btn btn-secondary" href="{% url 'home' %}" target="_blank">La televisión</a></li>
                         </ul>
                     </div>
                 </div>
@@ -73,8 +73,11 @@
                                 <a href="{{p.link}}" target="_blank" ><img class="mx-auto bg-light" src="{{p.imagen.url}}" alt=""></a>
                                 <h4>{{p.nombre}}</h4>
                                 <p class="">{{p.informacion}}</p>
+                                {% if p.instagram != '' %}
                                 <a class="btn btn-dark btn-social mx-2" href="{{p.instagram}}" target="_blank" aria-label="Parveen Anand Instagram Profile"><i class="fab fa-instagram"></i></i></a>
+                                {% if p.twitter != '' %}
                                 <a class="btn btn-dark btn-social mx-2" href="{{p.twitter}}" target="_blank" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-twitter"></i></a>
+                                {% if p.facebook != '' %}
                                 <a class="btn btn-dark btn-social mx-2" href="{{p.facebook}}" target="_blank" aria-label="Parveen Anand Facebook Profile"><i class="fab fa-facebook-f"></i></a>
                             </div>
                         </div>
