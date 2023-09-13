@@ -36,8 +36,14 @@ class Publicidad(models.Model):
     link = models.CharField(max_length=200, null=True, blank=True)
     imagen = models.ImageField(upload_to='images/', null=True, blank=True)
 
+    class Meta:
+        ordering = ['nombre']
+
 class Artista(models.Model):
     nombre = models.CharField(max_length=50)
     informacion = models.CharField(max_length=1000)
     link = models.CharField(max_length=200)
     imagen = models.ImageField(upload_to='images/', null=True, blank=True)
+
+    class Meta:
+        ordering = ['nombre']
