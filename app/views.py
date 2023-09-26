@@ -38,13 +38,6 @@ def registrar_contacto(request):
 def television(request):
     return render(request, 'rstv.html')
 
-# Create your views here.
-from django.shortcuts import render, redirect
-
-# imported our models
-from django.core.paginator import Paginator
-from . models import Song
-
 def hilo_mb(request):
     return render(request, 'hilos/hilo_mb.html')
 
