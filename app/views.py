@@ -45,11 +45,8 @@ from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from . models import Song
 
-def index(request):
-    paginator= Paginator(Song.objects.all(),1)
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
-    return render(request,"hilos/hilo_mb.html",{"page_obj":page_obj})
+def hilo_mb(request):
+    return render(request, 'hilos/hilo_mb.html')
 
 
 #####################################################################################################################
