@@ -11452,6 +11452,9 @@ header.fondo3 {
 header.fondo4 {
   background-image: url("../img/fondos_rs/fondoContacto_rsi.jpg");
 }
+header.fondoMB {
+  background-image: url("../img/hilos/mango_bajito/fondo/fondo_mb.jpg");
+}
 header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
