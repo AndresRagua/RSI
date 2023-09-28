@@ -102,7 +102,7 @@
                                     <button class="btn btn-warning btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                         Programas
                                     </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <ul class="dropdown-menu scrollable-menu" style="height: auto; max-height: 200px; overflow-x: hidden;" aria-labelledby="dropdownMenuButton1">
                                         {% for sp in Programacion %}
                                         {% if p.id == sp.programa_id %}
                                         <li>
