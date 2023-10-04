@@ -48,3 +48,9 @@ class Artista(models.Model):
 
     class Meta:
         ordering = ['nombre']
+
+class UsuariosHilo(models.Model):
+    nombre = models.CharField(max_length=150, null=True, blank= True)
+    imagen = models.ImageField(upload_to='images/', null=True, blank=True)
+    url = models.CharField(max_length=200)
+    email = models.CharField(max_length=200, null=True, blank=True)

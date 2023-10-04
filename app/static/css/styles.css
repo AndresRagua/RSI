@@ -62,8 +62,20 @@
   --bs-body-line-height: 1.5;
   --bs-body-color: #212529;
   --bs-body-bg: #fff;
+} 
+
+.boton_derecha {
+  float:right;
 }
 
+audio.audio_hilos {
+  width: 80%;
+  max-width: 500px;
+}
+
+section.fondo_hilos {
+  background-image: url("../img/hilos/fondo/fondo_rstv.jpg");
+}
 .rs1 {
   text-align: right;
 }
@@ -7957,6 +7969,10 @@ textarea.form-control-lg {
   border-radius: 0.25rem !important;
 }
 
+.rounded_hilos {
+  border-radius: 1rem !important;
+}
+
 .rounded-0 {
   border-radius: 0 !important;
 }
@@ -11451,9 +11467,6 @@ header.fondo3 {
 }
 header.fondo4 {
   background-image: url("../img/fondos_rs/fondoContacto_rsi.jpg");
-}
-header.fondoMB {
-  background-image: url("../img/hilos/mango_bajito/fondo/fondo_mb.jpg");
 }
 header.masthead {
   padding-top: 10.5rem;

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Programa, Contacto, Artista, Publicidad, Programacion
+from .models import *
 
 # Register your models here.
 
@@ -25,6 +25,11 @@ class ArtistaAdmin(admin.ModelAdmin):
 
 @admin.register(Publicidad)
 class PublicidadAdmin(admin.ModelAdmin):
+    list_display=('nombre',)
+    search_fields = ('nombre',)
+
+@admin.register(UsuariosHilo)
+class UsuariosHiloAdmin(admin.ModelAdmin):
     list_display=('nombre',)
     search_fields = ('nombre',)
 
