@@ -104,19 +104,37 @@
                                     </button>
                                     <ul class="dropdown-menu scrollable-menu" style="height: auto; max-height: 200px; overflow-x: hidden;" aria-labelledby="dropdownMenuButton1">
                                         {% for sp in Programacion %}
-                                        {% if p.id == sp.programa_id %}
-                                        <li>
-                                            <div class="text-center">
-                                                <p class="h6 small">{{sp.nombre}}</p>
-                                                <p class="h6 small">{{sp.fecha}}</p>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <audio id="stream" controls preload="none" style="width: 400px;">
-                                                    <source src="{{sp.audio.url}}" type="audio/mpeg">
-                                                </audio>
-                                            </div>
-                                        </li>
-                                        {% endif %}
+                                            {% if sp.ano == 2022 %}
+                                                <h3 class="text-center bg-secondary ">2022</h3>
+                                                {% if p.id == sp.programa_id %}
+                                                    <li>
+                                                        <div class="text-center">
+                                                            <p class="h6 small">{{sp.nombre}}</p>
+                                                            <p class="h6 small">{{sp.fecha}}</p>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <audio id="stream" controls preload="none" style="width: 400px;">
+                                                                <source src="{{sp.audio.url}}" type="audio/mpeg">
+                                                            </audio>
+                                                        </div>
+                                                    </li>
+                                                {% endif %}
+                                            {% elif sp.ano == 2023 %}
+                                                <h3 class="text-center bg-secondary">2023</h3>
+                                                {% if p.id == sp.programa_id %}
+                                                    <li>
+                                                        <div class="text-center">
+                                                            <p class="h6 small">{{sp.nombre}}</p>
+                                                            <p class="h6 small">{{sp.fecha}}</p>
+                                                        </div>
+                                                        <div class="col-lg-4">
+                                                            <audio id="stream" controls preload="none" style="width: 400px;">
+                                                                <source src="{{sp.audio.url}}" type="audio/mpeg">
+                                                            </audio>
+                                                        </div>
+                                                    </li>
+                                                {% endif %}
+                                            {% endif %}
                                         {% endfor %}
                                     </ul>
                                 </div>
