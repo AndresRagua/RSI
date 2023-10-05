@@ -26,11 +26,6 @@ class Migration(migrations.Migration):
             name='programacion',
             options={'ordering': ['-fecha', 'nombre']},
         ),
-        migrations.AddField(
-            model_name='programacion',
-            name='ano',
-            field=models.CharField(blank=True, max_length=50, null=True),
-        ),
         migrations.AlterField(
             model_name='publicidad',
             name='facebook',
