@@ -31,15 +31,15 @@
             </nav>
             {% for u in usuario %}
                 {% if user.email == u.email %}
-                    <section class="fondo_hilos page-section">
+                    <section class=" page-section" style="background-image: url('../../static/img/hilos/fondo/fondo_rstv.jpg'); ">
                         <div class="container">
-                            <div class="card mx-auto my-4 bg-warning rounded_hilos" style="width: 65%; max-width: 400px;">
+                            <div class="card mx-auto bg-warning rounded_hilos" style="width: 60%; max-width: 450px;">
                                 <img src="{{ u.imagen.url }}" class="card-img-top mx-auto rounded_hilos" style="width: 85%; max-width: 500px; margin-top: 20px;" alt="...">
-                                <div class="card-body mx-auto mt-2 text-black">
+                                <div class="card-body text-center mt-2 text-black">
                                     <h1>{{ u.nombre }}</h1>
                                 </div>
                                 <div class="card-body text-center mb-2">
-                                    <audio id="stream" controls preload="none" class="audio_hilos"> 
+                                    <audio id="stream" controls preload="none" style="width: 80%; max-width: 500px; min-width: 200px;"> 
                                         <source src="{{u.url}}" type="audio/mpeg">
                                     </audio>
                                 </div>
