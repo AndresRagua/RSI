@@ -16,6 +16,7 @@ class Programacion(models.Model):
     nombre = models.CharField(max_length=100, null= True, blank= True)
     audio = models.FileField(upload_to='audio/', null=True, blank=True)
     fecha = models.DateField(verbose_name='Fecha de Transmision',null = True, blank=True)
+    ano = models.IntegerField(null=True, blank=True)
     programa = models.ForeignKey(Programa, null=True, blank=True, on_delete=models.CASCADE)
 
     class Meta:
