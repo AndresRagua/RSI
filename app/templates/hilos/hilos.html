@@ -21,7 +21,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         
     </head>
-<body>
+<body style="background-image: url('../../static/img/hilos/fondo/fondo_rstv.jpg');">
     {% block content %}
         {% if user.is_authenticated %}
             <nav class="navbar sticky-top navbar-light bg-light">
@@ -31,9 +31,9 @@
             </nav>
             {% for u in usuario %}
                 {% if user.email == u.email %}
-                    <section class=" page-section" style="background-image: url('../../static/img/hilos/fondo/fondo_rstv.jpg'); ">
+                    <section class=" page-section">
                         <div class="container">
-                            <div class="card mx-auto bg-warning rounded_hilos" style="width: 65%; max-width: 450px;">
+                            <div class="card mx-auto bg-warning rounded_hilos" style="width: 70%; max-width: 450px;">
                                 <img src="{{ u.imagen.url }}" class="card-img-top mx-auto rounded_hilos" style="width: 85%; max-width: 500px; margin-top: 20px;" alt="...">
                                 <div class="card-body text-center mt-2 text-black">
                                     <h1>{{ u.nombre }}</h1>
