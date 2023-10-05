@@ -31,7 +31,7 @@
             </nav>
             {% for u in usuario %}
                 {% if user.email == u.email %}
-                    <section class="page-section fondo_hilos">
+                    <section class="fondo_hilos page-section">
                         <div class="container">
                             <div class="card mx-auto my-4 bg-warning rounded_hilos" style="width: 65%; max-width: 400px;">
                                 <img src="{{ u.imagen.url }}" class="card-img-top mx-auto rounded_hilos" style="width: 85%; max-width: 500px; margin-top: 20px;" alt="...">
