@@ -31,3 +31,9 @@ class ContactoForm(forms.ModelForm):
     class Meta:
         model = Contacto
         fields = '__all__'
+
+class UsuariosHiloForm(forms.ModelForm):
+
+    class Meta:
+        model = UsuariosHilo
+        fields = '__all__'
