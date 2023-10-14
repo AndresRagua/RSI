@@ -25,8 +25,8 @@
         </div>
         <div class="row text-center">
                 {% for a in artistas %}
-                <div class="col-md-4 mx-auto">
-                    <img class="card-img-top card-artist" src="{{a.imagen.url}}" alt="Card image cap">
+                <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 pb-5 px-4">
+                    <img class="card-img-top card-artist" style="border-radius: 0.90rem !important;" src="{{a.imagen.url}}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{a.nombre}}</h5>
                         <p class="card-text">{{a.informacion}}</p>

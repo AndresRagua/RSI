@@ -64,6 +64,13 @@
   --bs-body-bg: #fff;
 } 
 
+.boton_derecha {
+  float:right;
+}
+
+section.fondo_hilos {
+  background-image: url("../img/hilos/fondo/fondo_rstv.jpg");
+}
 .rs1 {
   text-align: right;
 }

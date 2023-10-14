@@ -35,7 +35,6 @@
                     <div class="collapse navbar-collapse" id="navbarResponsive">
                         <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                             <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a></li>
                             <li class="nav-item"><a class="nav-link" href="{% url 'artistas' %}">Artistas</a></li>
                             <li class="nav-item"><a class="nav-link" href="{% url 'contacto' %}">Contáctanos</a></li>
                             <li class="nav-item"><a class="nav-link btn btn-secondary" href="{% url 'television' %}">La televisión</a></li>
@@ -66,7 +65,7 @@
                     </div>
                     <div class="row">
                         {% for p in publicidad %}
-                        <div class="col-lg-4 mx-auto">
+                        <div class="col-xl-1">
                             <div class="team-member">
                                 <a href="{{p.link}}" target="_blank" ><img class="mx-auto bg-light" src="{{p.imagen.url}}" alt=""></a>
                                 <h4>{{p.nombre}}</h4>
@@ -92,8 +91,8 @@
                     </div>
                     <div class="row text-center">
                         {% for p in programa %}
-                        <div class="col-md-4 mx-auto">
-                            <img class="card-img-top card-artist" src="{{p.imagen.url}}" alt="Card image cap">
+                        <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-6 pb-5 px-4">
+                            <img class="card-img-top card-artist" style="border-radius: 0.90rem !important;" src="{{p.imagen.url}}" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">{{p.nombre}}</h5>
                                 <p class="card-text">{{p.conductor}}</p>
@@ -103,7 +102,7 @@
                                         Programas
                                     </button>
                                     <ul class="dropdown-menu scrollable-menu" style="height: auto; max-height: 200px; overflow-x: hidden;" aria-labelledby="dropdownMenuButton1">
-                                        <h3 class="text-center text-white bg-secondary">2023</h3>
+                                        <h3 class="text-center text-white bg-secondary ">2023</h3>
                                         {% for sp in Programacion %}
                                             {% if sp.ano == 2023 %}
                                                 {% if p.id == sp.programa_id %}
@@ -197,7 +196,6 @@
                         </div>
                         <div class="col-lg-4 text-lg-end">
                             <a class="link-dark text-decoration-none me-3 text-white" href="{% url 'home' %}">La Radio</a>
-                            <a class="link-dark text-decoration-none me-3 text-white" href="{% url 'nosotros' %}">Nosotros</a>
                             <a class="link-dark text-decoration-none me-3 text-white" href="{% url 'artistas' %}">Artistas</a>
                             <a class="link-dark text-decoration-none text-white" href="{% url 'contacto' %}">Contactanos</a>
                         </div>
