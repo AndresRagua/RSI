@@ -13,6 +13,11 @@ class ProgramacionAdmin(admin.ModelAdmin):
     list_display=('nombre','fecha',)
     search_fields = ('nombre','fecha',)
 
+@admin.register(Cania)
+class CaniaAdmin(admin.ModelAdmin):
+    list_display=('nombre',)
+    search_fields = ('nombre',)
+
 @admin.register(Contacto)
 class ContactoAdmin(admin.ModelAdmin):
     list_display=('nombre','correo','numero')
