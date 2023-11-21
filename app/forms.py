@@ -14,6 +14,12 @@ class ProgramacionForm(forms.ModelForm):
         model = Programacion
         fields = '__all__'
 
+class CaniaForm(forms.ModelForm):
+
+    class Meta:
+        model = Cania
+        fields = '__all__'
+
 class ArtistaForm(forms.ModelForm):
 
     class Meta:

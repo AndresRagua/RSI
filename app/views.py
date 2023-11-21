@@ -1,20 +1,17 @@
 from django.shortcuts import render, redirect
 from .models import *
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required
 from .forms import *
+from django.conf import settings
 # Create your views here.
 
 def home(request):
     publicidadListados = Publicidad.objects.all()
     programaListados = Programa.objects.all()
     subProgramaListados = Programacion.objects.all()
+    nutricania = Cania.objects.all()
     #return render(request, 'home.html')
-    return render(request,"home.html",{"publicidad": publicidadListados,"programa": programaListados,"Programacion":subProgramaListados})
-
-def nosotros(request):
-    return render(request, 'nosotros.html')
+    return render(request,"home.html",{"publicidad": publicidadListados,"programa": programaListados,"Programacion":subProgramaListados,"nutri":nutricania})
 
 def artistas(request):
     artistasListados = Artista.objects.all()
@@ -23,6 +20,7 @@ def artistas(request):
 
 def contacto(request):
     return render(request, 'contacto.html')
+
 
 def registrar_contacto(request):
     nombre = request.POST['name']
@@ -41,10 +39,26 @@ def hilos(request):
     usuarioHilo = UsuariosHilo.objects.all()
     return render(request,"hilos/hilos.html", {"usuario": usuarioHilo})
 
+# #####################################################################################################################
 
-#####################################################################################################################
+# # def login_admin(request):
+# #     if request.method == 'GET':
+# #         return render(request,"registration/login.html",{'form':AuthenticationForm})
+# #     else:
+# #         name = request.POST["username"]
+# #         password = request.POST["password"]
+# #         user = authenticate(username=name,password=password)
+# #         if user is None:
+# #             return render(request,"registration/login.html",{'form':AuthenticationForm,'error':"Usuario y/o contraseña incorrectos"})
+# #         else:
+# #             login(request, user)
+# #             return redirect("/administracion")
 
-# ----------------- CRUD PROGRAMAS ------------------------------------
+# # @login_required
+# # def administracion(request):
+# #     return render(request, 'views_admin/administracion.html')
+
+# # ----------------- CRUD PROGRAMAS ------------------------------------
 
 # # Metodo 1
 # def admin_Programas(request):
